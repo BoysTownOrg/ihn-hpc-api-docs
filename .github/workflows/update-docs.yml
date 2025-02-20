@@ -3,6 +3,9 @@ name: update-docs
 
 on: [push, pull_request, workflow_dispatch]
 
+permissions:
+  id-token: write
+
 jobs:
   docs:
     runs-on: ubuntu-latest
