@@ -1,4 +1,4 @@
-IHN HPC API documentation
+IHN HPC API Reference
 =======================
 
 .. toctree::
