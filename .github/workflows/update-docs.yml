@@ -15,7 +15,7 @@ jobs:
       - name: Sphinx build
         run: |
           sphinx-build . _build
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: _build/
       - uses: actions/deploy-pages@v4
