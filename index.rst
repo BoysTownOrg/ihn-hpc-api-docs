@@ -6,4 +6,5 @@ IHN HPC API Reference
    :caption: Contents:
 
    qsiprep.md
+   qsirecon.md
 

@@ -1,16 +1,16 @@
-## submit_qsiprep_test
+## submit_qsirecon_test
 
 ```
-submit_qsiprep_test <image_tag> <script> [args]
+submit_qsirecon_test <image_tag> <script> [args]
 ```
 
 ### Description
 
-Submits a script for execution by a qsiprep container.
+Submits a script for execution by a qsirecon container.
 
 ### Parameters
 
-- **image_tag**: qsiprep image tag (e.g., 1.0.0)
+- **image_tag**: qsirecon image tag (e.g., 1.0.0)
 - **script**: path to script
 - **args**: any arguments to forward to **script**
 
@@ -25,24 +25,24 @@ LOGDIR=/path/to/logs/
 JOB_NAME=QSI
 MAX_TIME=24:00:00
 
-for DIR in "$HOME"/qsiprep_runs/BIDS/sub-*/; do
+for DIR in "$HOME"/qsiprep-output/sub-*/; do
     SUBJECT=$(basename "$DIR")
-    submit_qsiprep_test 1.0.0 /path/to/qsiprep.sh "$SUBJECT"
+    submit_qsirecon_test 1.0.0 /path/to/qsirecon.sh "$SUBJECT"
 done
 ```
 
-where qsiprep.sh is
+where qsirecon.sh is
 
 ```bash
 #!/bin/bash
 
 SUBJECT=$1
 
-qsiprep \
-    "$HOME"/qsiprep_runs/BIDS/ \
-    "$HOME"/qsiprep_runs/post_qsiprep/ \
+qsirecon \
+    "$HOME"/qsiprep-output/ \
+    "$HOME"/qsirecon-output/ \
     participant \
-    --output-resolution 2 \
+    --recon-spec dsi_studio_autotrack \
     --fs-license-file /opt/freesurfer/license.txt \
     --participant-label "$SUBJECT"
 ```
@@ -50,5 +50,5 @@ qsiprep \
 ### Notes
 
 - The user's home directory is mounted inside the container and available as **$HOME** within **script**
-- **LOGDIR** and **JOB_NAME** must be set before calling **submit_qsiprep_test**
+- **LOGDIR** and **JOB_NAME** must be set before calling **submit_qsirecon_test**
 - The freesurfer license is mounted at **/opt/freesurfer/license.txt**
