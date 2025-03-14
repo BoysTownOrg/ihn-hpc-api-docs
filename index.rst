@@ -5,6 +5,7 @@ IHN HPC API Reference
    :maxdepth: 2
    :caption: Contents:
 
+   freesurfer.md
    qsiprep.md
    qsirecon.md
 
