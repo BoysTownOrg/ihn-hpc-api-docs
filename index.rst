@@ -8,4 +8,5 @@ IHN HPC API Reference
    freesurfer.md
    qsiprep.md
    qsirecon.md
+   hcppipelines.md
 
