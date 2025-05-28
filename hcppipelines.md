@@ -27,12 +27,13 @@ set -u
 export TMPDIR=/ssd/home/$USER/TEMP
 participant_label=$1
 
+# The --license_key is supposedly for freesurfer, but I don't think it's actually used...
 podman run --rm \
   -v "$HOME":"$HOME" \
   docker.io/bids/hcppipelines:v4.3.0-3 \
     "$HOME"/path/to/bids/ "$HOME"/path/to/outputs participant \
     --participant_label "$participant_label" \
-    --license_key idk \ # I don't think this matters...
+    --license_key idk \
     --stages PreFreeSurfer FreeSurfer PostFreeSurfer
 ```
 
