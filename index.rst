@@ -10,4 +10,5 @@ IHN HPC API Reference
    qsirecon.md
    hcppipelines.md
    qunex.md
+   recon-all.md
 
