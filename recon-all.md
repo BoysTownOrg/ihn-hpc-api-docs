@@ -8,7 +8,6 @@ Create a text file, `niis.txt`, in HPCHome containing the paths to each NIfTI re
 data/M68111111.nii
 data/M68222222.nii
 data/M68333333.nii
-...
 ```
 
 For this tutorial we assume an URSI, e.g. `M68111111`, is embedded in each path, and the embedded URSI will be the subject identifier.

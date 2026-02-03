@@ -11,4 +11,5 @@ IHN HPC API Reference
    hcppipelines.md
    qunex.md
    recon-all.md
+   mri_segment_hypothalamic_subunits.md
 
