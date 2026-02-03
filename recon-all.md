@@ -1,4 +1,4 @@
-## recon-all tutorial
+## recon-all Tutorial
 
 ### Data
 
@@ -11,7 +11,7 @@ data/M68333333.nii
 ...
 ```
 
-For this tutorial we assume an URSI, e.g. "M68111111", is embedded in each path, and the embedded URSI will be the subject identifier.
+For this tutorial we assume an URSI, e.g. `M68111111`, is embedded in each path, and the embedded URSI will be the subject identifier.
 
 ### Script
 
@@ -39,7 +39,7 @@ mkdir recon-all-output
 Start the jobs:
 
 ```bash
-/mnt/home/shared/bashford/ihn-hpc-sbatch-array freesurfer --tag 8.1.0 --max-tasks 100 recon-job.sh niis.txt
+/mnt/home/shared/bashford/ihn-hpc-sbatch-array freesurfer --tag 8.1.0 recon-job.sh niis.txt --max-tasks 100
 ```
 
 You may adjust `--max-tasks` based on how many NIfTIs you are processing. This number represents the maximum number of recon-all jobs that will run simultaneously. Try not to use more than ~120 to be polite to other users.
