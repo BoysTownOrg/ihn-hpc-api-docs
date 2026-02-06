@@ -12,4 +12,5 @@ IHN HPC API Reference
    qunex.md
    recon-all.md
    mri_segment_hypothalamic_subunits.md
+   mri_pglands_seg.md
 
