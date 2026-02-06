@@ -1,4 +1,4 @@
-## mri\_segment\_hypothalamic\_subunits Tutorial
+## mri\_pglands\_seg Tutorial
 
 ### Patch
 
